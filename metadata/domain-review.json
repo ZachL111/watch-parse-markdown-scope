@@ -1,0 +1,73 @@
+{
+  "repo": "watch-parse-markdown-scope",
+  "language": "Ruby",
+  "category": "Parsers",
+  "goal": "Implement a Ruby parsers project for markdown incremental indexing, using append-only fixtures and checkpoint recovery checks.",
+  "review_model": {
+    "terms": [
+      "token drift",
+      "grammar width",
+      "label quality",
+      "error locality"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "token drift",
+      "signal": 79,
+      "slack": 40,
+      "drag": 31,
+      "confidence": 87,
+      "score": 192,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "grammar width",
+      "signal": 78,
+      "slack": 21,
+      "drag": 18,
+      "confidence": 93,
+      "score": 216,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "label quality",
+      "signal": 81,
+      "slack": 48,
+      "drag": 20,
+      "confidence": 82,
+      "score": 232,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "error locality",
+      "signal": 89,
+      "slack": 34,
+      "drag": 27,
+      "confidence": 54,
+      "score": 185,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "token drift",
+      "signal": 57,
+      "slack": 49,
+      "drag": 10,
+      "confidence": 84,
+      "score": 217,
+      "lane": "ship"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+name,focus,signal,slack,drag,confidence,score,lane
+baseline,token drift,79,40,31,87,192,ship
+stress,grammar width,78,21,18,93,216,ship
+edge,label quality,81,48,20,82,232,ship
+recovery,error locality,89,34,27,54,185,ship
+stale,token drift,57,49,10,84,217,ship
